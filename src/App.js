@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useRef, useEffect, useState } from 'react';
 import './index.css';
 import ContactForm from './components/ContacForm';
