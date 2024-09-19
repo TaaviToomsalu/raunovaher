@@ -1,54 +1,10 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import './index.css';
-import ContactForm from './components/ContacForm';
+
 
 function App() {
-
-  
-    const [formData, setFormData] = useState({
-      name: '',
-      email: '',
-      message: ''
-    });
-    const [status, setStatus] = useState('');
-  
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setFormData({
-        ...formData,
-        [name]: value
-      });
-    };
-
-    console.log(formData)
-  
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      
-      try {
-        const response = await fetch('/send-email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
-  
-        if (response.ok) {
-          setStatus('Email sent successfully.');
-          setFormData({
-            name: '',
-            email: '',
-            message: ''
-          });
-        } else {
-          setStatus('There was an error sending the email.');
-        }
-      } catch (error) {
-        setStatus('There was an error sending the email.');
-      }
-    };
+    
   
 
   return (
@@ -87,15 +43,16 @@ function App() {
       </div>
 
       <div className="alakategooria">
-        <h3>SAADA MULLE EMAIL</h3>
+        <h3>KONTAKT</h3>
       </div>
-
-      <ContactForm
-        onSubmit={handleSubmit}
-        formData={formData}
-        onChange={handleChange}
-        status={status}
-      />
+      
+      <div class="kontakt">
+        <img src="raunolilledes_cropped2.jpg" alt="Rauno lilledes" class="image" />
+        <div class="text">
+          <h2>Your Title</h2>
+          <p>Your text goes here. This can be a description or any other content.</p>
+        </div>
+      </div>
 
 
     </div>
