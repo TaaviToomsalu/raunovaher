@@ -47,11 +47,17 @@ function App() {
       </div>
       
       <div class="kontakt">
-        <img src="raunolilledes_cropped2.jpg" alt="Rauno lilledes" class="image" />
-        <div class="text">
-          <h2>Your Title</h2>
-          <p>Your text goes here. This can be a description or any other content.</p>
+        <div className='elements'>
+          <div class="text">
+              <h2>Your Title</h2>
+              <p>Your text goes here. This can be a description or any other content.</p>
+          </div>
+          <img src="raunolilledes_cropped2.jpg" alt="Rauno lilledes" class="image" />
         </div>
+      </div>
+
+      <div className='footer'>
+        <p>Created by TaaviCode</p>
       </div>
 
 
